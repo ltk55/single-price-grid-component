@@ -451,4 +451,31 @@ template {
 [hidden] {
   display: none;
 }
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 500px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "join join" "mthsub whyus";
+  }
+  .join {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: join;
+  }
+  .mthsub {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: mthsub;
+  }
+  .whyus {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: whyus;
+  }
+}
 /*# sourceMappingURL=main.css.map */
